@@ -5,17 +5,21 @@
 //  Created by Carlos Aguilar on 2/24/25.
 //
 
+import Amplify
+import Authenticator
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        Authenticator { state in
+            VStack {
+                Button("Sign out") {
+                    Task {
+                        await state.signOut()
+                    }
+                }
+            }
         }
-        .padding()
     }
 }
 

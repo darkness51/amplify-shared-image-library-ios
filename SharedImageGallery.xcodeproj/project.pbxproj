@@ -6,6 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F71C730C2D6CD100005E93CC /* AWSCognitoAuthPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = F71C730B2D6CD100005E93CC /* AWSCognitoAuthPlugin */; };
+		F71C730E2D6CD100005E93CC /* Amplify in Frameworks */ = {isa = PBXBuildFile; productRef = F71C730D2D6CD100005E93CC /* Amplify */; };
+		F71C73112D6CD15E005E93CC /* Authenticator in Frameworks */ = {isa = PBXBuildFile; productRef = F71C73102D6CD15E005E93CC /* Authenticator */; };
+		F71C73142D6CD5CF005E93CC /* AWSS3StoragePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = F71C73132D6CD5CF005E93CC /* AWSS3StoragePlugin */; };
+		F71C73162D6CF186005E93CC /* AWSDataStorePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = F71C73152D6CF186005E93CC /* AWSDataStorePlugin */; };
+		F71C73182D6CF221005E93CC /* AWSAPIPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = F71C73172D6CF221005E93CC /* AWSAPIPlugin */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		F71C72FA2D6CBAED005E93CC /* SharedImageGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharedImageGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +32,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F71C73182D6CF221005E93CC /* AWSAPIPlugin in Frameworks */,
+				F71C730C2D6CD100005E93CC /* AWSCognitoAuthPlugin in Frameworks */,
+				F71C730E2D6CD100005E93CC /* Amplify in Frameworks */,
+				F71C73112D6CD15E005E93CC /* Authenticator in Frameworks */,
+				F71C73162D6CF186005E93CC /* AWSDataStorePlugin in Frameworks */,
+				F71C73142D6CD5CF005E93CC /* AWSS3StoragePlugin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +48,7 @@
 			isa = PBXGroup;
 			children = (
 				F71C72FC2D6CBAED005E93CC /* SharedImageGallery */,
+				F71C73122D6CD5CF005E93CC /* Frameworks */,
 				F71C72FB2D6CBAED005E93CC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +59,13 @@
 				F71C72FA2D6CBAED005E93CC /* SharedImageGallery.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F71C73122D6CD5CF005E93CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -65,6 +88,12 @@
 			);
 			name = SharedImageGallery;
 			packageProductDependencies = (
+				F71C730B2D6CD100005E93CC /* AWSCognitoAuthPlugin */,
+				F71C730D2D6CD100005E93CC /* Amplify */,
+				F71C73102D6CD15E005E93CC /* Authenticator */,
+				F71C73132D6CD5CF005E93CC /* AWSS3StoragePlugin */,
+				F71C73152D6CF186005E93CC /* AWSDataStorePlugin */,
+				F71C73172D6CF221005E93CC /* AWSAPIPlugin */,
 			);
 			productName = SharedImageGallery;
 			productReference = F71C72FA2D6CBAED005E93CC /* SharedImageGallery.app */;
@@ -94,6 +123,10 @@
 			);
 			mainGroup = F71C72F12D6CBAED005E93CC;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				F71C730A2D6CD100005E93CC /* XCRemoteSwiftPackageReference "amplify-swift" */,
+				F71C730F2D6CD15E005E93CC /* XCRemoteSwiftPackageReference "amplify-ui-swift-authenticator" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F71C72FB2D6CBAED005E93CC /* Products */;
 			projectDirPath = "";
@@ -324,6 +357,58 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F71C730A2D6CD100005E93CC /* XCRemoteSwiftPackageReference "amplify-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/aws-amplify/amplify-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.45.4;
+			};
+		};
+		F71C730F2D6CD15E005E93CC /* XCRemoteSwiftPackageReference "amplify-ui-swift-authenticator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/aws-amplify/amplify-ui-swift-authenticator";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F71C730B2D6CD100005E93CC /* AWSCognitoAuthPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F71C730A2D6CD100005E93CC /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = AWSCognitoAuthPlugin;
+		};
+		F71C730D2D6CD100005E93CC /* Amplify */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F71C730A2D6CD100005E93CC /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = Amplify;
+		};
+		F71C73102D6CD15E005E93CC /* Authenticator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F71C730F2D6CD15E005E93CC /* XCRemoteSwiftPackageReference "amplify-ui-swift-authenticator" */;
+			productName = Authenticator;
+		};
+		F71C73132D6CD5CF005E93CC /* AWSS3StoragePlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F71C730A2D6CD100005E93CC /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = AWSS3StoragePlugin;
+		};
+		F71C73152D6CF186005E93CC /* AWSDataStorePlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F71C730A2D6CD100005E93CC /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = AWSDataStorePlugin;
+		};
+		F71C73172D6CF221005E93CC /* AWSAPIPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F71C730A2D6CD100005E93CC /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = AWSAPIPlugin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F71C72F22D6CBAED005E93CC /* Project object */;
 }
