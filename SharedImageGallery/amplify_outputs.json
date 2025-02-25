@@ -28,9 +28,9 @@
   "data": {
     "url": "https://4gyj2p7npjgvrkrumsvmrvp3gq.appsync-api.us-east-1.amazonaws.com/graphql",
     "aws_region": "us-east-1",
-    "default_authorization_type": "AWS_IAM",
+    "default_authorization_type": "AMAZON_COGNITO_USER_POOLS",
     "authorization_types": [
-      "AMAZON_COGNITO_USER_POOLS"
+      "AWS_IAM"
     ],
     "model_introspection": {
       "version": 1,
@@ -120,6 +120,31 @@
       "enums": {},
       "nonModels": {}
     }
+  },
+  "storage": {
+    "aws_region": "us-east-1",
+    "bucket_name": "amplify-amplifybackenddem-sharedgallerybucket2e587-xaaqsofaiknj",
+    "buckets": [
+      {
+        "name": "sharedGallery",
+        "bucket_name": "amplify-amplifybackenddem-sharedgallerybucket2e587-xaaqsofaiknj",
+        "aws_region": "us-east-1",
+        "paths": {
+          "gallery/*": {
+            "guest": [
+              "get",
+              "list"
+            ],
+            "entityidentity": [
+              "get",
+              "list",
+              "write",
+              "delete"
+            ]
+          }
+        }
+      }
+    ]
   },
   "version": "1.3"
 }
